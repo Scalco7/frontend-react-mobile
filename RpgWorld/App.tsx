@@ -12,37 +12,8 @@ import {
 
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 
-import Home from './src/home/page/Home';
-
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
-
-function Section({ children, title }: SectionProps): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-}
+import HomeScreen from './src/home/screen/home';
+import HeroesScreen from './src/heroes/screen/heroes';
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -57,7 +28,7 @@ function App(): React.JSX.Element {
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
-      <Home></Home>
+      <HeroesScreen></HeroesScreen>
     </SafeAreaView>
   );
 }

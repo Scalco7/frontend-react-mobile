@@ -10,7 +10,7 @@ import RadialGradient from 'react-native-radial-gradient';
 
 const image = require('../../../assets/background/home.png');
 
-function Home(): React.JSX.Element {
+function HomeScreen(): React.JSX.Element {
     return (
         <View style={styles.box}>
             <ImageBackground source={image} resizeMode="cover" style={styles.image}>
@@ -60,4 +60,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default Home;
+export default HomeScreen;
