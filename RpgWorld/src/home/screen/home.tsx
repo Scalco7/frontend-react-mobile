@@ -21,7 +21,18 @@ function HomeScreen(): React.JSX.Element {
                         stops={[0, 0.1, 1]}
                         center={[150, 30]}
                         radius={150}>
-                        <Text style={styles.text}>Iniciar aventura</Text>
+                        <Text style={styles.text}>Heróis</Text>
+                    </RadialGradient>
+                </TouchableHighlight>
+
+                <TouchableHighlight style={styles.button}>
+                    <RadialGradient
+                        style={styles.gradient}
+                        colors={['white', '#ffffffab', '#ffffff00']}
+                        stops={[0, 0.1, 1]}
+                        center={[150, 30]}
+                        radius={150}>
+                        <Text style={styles.text}>Aventuras</Text>
                     </RadialGradient>
                 </TouchableHighlight>
             </ImageBackground>
@@ -49,7 +60,8 @@ const styles = StyleSheet.create({
 
     button: {
         borderColor: 'black',
-        borderWidth: 2
+        borderWidth: 2,
+        marginBottom: 20
     },
 
     gradient: {

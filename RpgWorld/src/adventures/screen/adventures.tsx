@@ -2,7 +2,7 @@ import { View, StyleSheet, ImageBackground } from "react-native";
 
 const backgroundImage = require('../../../assets/background/maps.png');
 
-function MapsScreen(): React.JSX.Element {
+function AdventuresScreen(): React.JSX.Element {
     return (
         <View style={styles.box}>
             <ImageBackground source={backgroundImage} style={styles.imageBackground}>
@@ -26,4 +26,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default MapsScreen;
+export default AdventuresScreen;
