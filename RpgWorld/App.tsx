@@ -12,8 +12,8 @@ import {
 
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 
-import HomeScreen from './src/home/page/home';
-import HeroesScreen from './src/heroes/page/heroes';
+import HomeScreen from './src/home/screen/home';
+import HeroesScreen from './src/heroes/screen/heroes';
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
