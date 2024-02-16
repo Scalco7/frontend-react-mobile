@@ -14,6 +14,7 @@ import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 import HomeScreen from './src/home/screen/home';
 import HeroesScreen from './src/heroes/screen/heroes';
+import MapsScreen from './src/maps/screen/maps';
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -28,7 +29,7 @@ function App(): React.JSX.Element {
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
-      <HeroesScreen></HeroesScreen>
+      <MapsScreen></MapsScreen>
     </SafeAreaView>
   );
 }
