@@ -1,13 +1,15 @@
-import { View, StyleSheet, ImageBackground } from "react-native";
+import { View, StyleSheet, Image } from "react-native";
+import GoBackButton from "../../components/go-back-button/button";
 
 const backgroundImage = require('../../../assets/background/maps.png');
 
-function AdventuresScreen(): React.JSX.Element {
+function AdventuresScreen(props: any): React.JSX.Element {
     return (
         <View style={styles.box}>
-            <ImageBackground source={backgroundImage} style={styles.imageBackground}>
-
-            </ImageBackground>
+            <Image source={backgroundImage} style={styles.imageBackground}></Image>
+            <View style={styles.backButton}>
+                <GoBackButton navigation={props.navigation}></GoBackButton>
+            </View>
         </View>
     );
 }
@@ -18,12 +20,19 @@ const styles = StyleSheet.create({
     },
 
     imageBackground: {
+        height: '100%',
+        position: 'absolute',
         flex: 1,
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
-        opacity: 0.7
     },
+
+    backButton: {
+        position: 'absolute',
+        top: 10,
+        left: 10
+    }
 });
 
 export default AdventuresScreen;

@@ -21,7 +21,7 @@ function HomeScreen(props: any): React.JSX.Element {
 
                 <TouchableHighlight
                     style={styles.button}
-                    onPress={() => props.navigation.push('Heroes')}
+                    onPress={() => props.navigation.push('Adventures')}
                 >
                     <Text style={styles.text}>Aventuras</Text>
                 </TouchableHighlight>
