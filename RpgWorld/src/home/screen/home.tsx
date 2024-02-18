@@ -1,10 +1,4 @@
-import {
-    StyleSheet,
-    View,
-    Text,
-    ImageBackground,
-    TouchableHighlight,
-} from 'react-native';
+import { StyleSheet, View, Text, ImageBackground, TouchableOpacity } from 'react-native';
 
 const image = require('../../../assets/img/background/home.png');
 
@@ -12,19 +6,19 @@ function HomeScreen(props: any): React.JSX.Element {
     return (
         <View style={styles.box}>
             <ImageBackground source={image} resizeMode="cover" style={styles.image}>
-                <TouchableHighlight
+                <TouchableOpacity
                     style={styles.button}
                     onPress={() => props.navigation.push('Heroes')}
                 >
                     <Text style={styles.text}>Heróis</Text>
-                </TouchableHighlight>
+                </TouchableOpacity>
 
-                <TouchableHighlight
+                <TouchableOpacity
                     style={styles.button}
                     onPress={() => props.navigation.push('Adventures')}
                 >
                     <Text style={styles.text}>Aventuras</Text>
-                </TouchableHighlight>
+                </TouchableOpacity>
             </ImageBackground>
         </View>
     );
