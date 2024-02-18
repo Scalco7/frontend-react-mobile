@@ -43,16 +43,13 @@ const styles = StyleSheet.create({
     },
 
     button: {
-        borderColor: 'black',
-        borderWidth: 2,
-        marginBottom: 20
-    },
-
-    gradient: {
         width: 300,
         height: 60,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        borderColor: 'black',
+        borderWidth: 2,
+        marginBottom: 20
     }
 });
 
