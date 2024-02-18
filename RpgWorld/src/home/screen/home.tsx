@@ -6,8 +6,6 @@ import {
     TouchableHighlight,
 } from 'react-native';
 
-import RadialGradient from 'react-native-radial-gradient';
-
 const image = require('../../../assets/background/home.png');
 
 function HomeScreen(): React.JSX.Element {
@@ -15,25 +13,11 @@ function HomeScreen(): React.JSX.Element {
         <View style={styles.box}>
             <ImageBackground source={image} resizeMode="cover" style={styles.image}>
                 <TouchableHighlight style={styles.button}>
-                    <RadialGradient
-                        style={styles.gradient}
-                        colors={['white', '#ffffffab', '#ffffff00']}
-                        stops={[0, 0.1, 1]}
-                        center={[150, 30]}
-                        radius={150}>
-                        <Text style={styles.text}>Heróis</Text>
-                    </RadialGradient>
+                    <Text style={styles.text}>Heróis</Text>
                 </TouchableHighlight>
 
                 <TouchableHighlight style={styles.button}>
-                    <RadialGradient
-                        style={styles.gradient}
-                        colors={['white', '#ffffffab', '#ffffff00']}
-                        stops={[0, 0.1, 1]}
-                        center={[150, 30]}
-                        radius={150}>
-                        <Text style={styles.text}>Aventuras</Text>
-                    </RadialGradient>
+                    <Text style={styles.text}>Aventuras</Text>
                 </TouchableHighlight>
             </ImageBackground>
         </View>
@@ -65,9 +49,9 @@ const styles = StyleSheet.create({
     },
 
     gradient: {
-        width: 300, 
-        height: 60, 
-        justifyContent: 'center', 
+        width: 300,
+        height: 60,
+        justifyContent: 'center',
         alignItems: 'center'
     }
 });
