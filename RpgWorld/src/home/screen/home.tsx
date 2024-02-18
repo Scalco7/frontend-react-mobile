@@ -6,23 +6,24 @@ import {
     TouchableHighlight,
 } from 'react-native';
 
-import RadialGradient from 'react-native-radial-gradient';
-
 const image = require('../../../assets/background/home.png');
 
-function HomeScreen(): React.JSX.Element {
+function HomeScreen(props: any): React.JSX.Element {
     return (
         <View style={styles.box}>
             <ImageBackground source={image} resizeMode="cover" style={styles.image}>
-                <TouchableHighlight style={styles.button}>
-                    <RadialGradient
-                        style={styles.gradient}
-                        colors={['white', '#ffffffab', '#ffffff00']}
-                        stops={[0, 0.1, 1]}
-                        center={[150, 30]}
-                        radius={150}>
-                        <Text style={styles.text}>Iniciar aventura</Text>
-                    </RadialGradient>
+                <TouchableHighlight
+                    style={styles.button}
+                    onPress={() => props.navigation.push('Heroes')}
+                >
+                    <Text style={styles.text}>Heróis</Text>
+                </TouchableHighlight>
+
+                <TouchableHighlight
+                    style={styles.button}
+                    onPress={() => props.navigation.push('Adventures')}
+                >
+                    <Text style={styles.text}>Aventuras</Text>
                 </TouchableHighlight>
             </ImageBackground>
         </View>
@@ -48,15 +49,13 @@ const styles = StyleSheet.create({
     },
 
     button: {
+        width: 300,
+        height: 60,
+        justifyContent: 'center',
+        alignItems: 'center',
         borderColor: 'black',
-        borderWidth: 2
-    },
-
-    gradient: {
-        width: 300, 
-        height: 60, 
-        justifyContent: 'center', 
-        alignItems: 'center'
+        borderWidth: 2,
+        marginBottom: 20
     }
 });
 
