@@ -8,15 +8,21 @@ import {
 
 const image = require('../../../assets/background/home.png');
 
-function HomeScreen(): React.JSX.Element {
+function HomeScreen(props: any): React.JSX.Element {
     return (
         <View style={styles.box}>
             <ImageBackground source={image} resizeMode="cover" style={styles.image}>
-                <TouchableHighlight style={styles.button}>
+                <TouchableHighlight
+                    style={styles.button}
+                    onPress={() => props.navigation.push('Heroes')}
+                >
                     <Text style={styles.text}>Heróis</Text>
                 </TouchableHighlight>
 
-                <TouchableHighlight style={styles.button}>
+                <TouchableHighlight
+                    style={styles.button}
+                    onPress={() => props.navigation.push('Heroes')}
+                >
                     <Text style={styles.text}>Aventuras</Text>
                 </TouchableHighlight>
             </ImageBackground>
