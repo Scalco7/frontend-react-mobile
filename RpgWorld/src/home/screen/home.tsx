@@ -6,7 +6,7 @@ import {
     TouchableHighlight,
 } from 'react-native';
 
-const image = require('../../../assets/background/home.png');
+const image = require('../../../assets/img/background/home.png');
 
 function HomeScreen(props: any): React.JSX.Element {
     return (

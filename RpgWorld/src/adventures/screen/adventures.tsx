@@ -1,7 +1,7 @@
 import { View, StyleSheet, Image } from "react-native";
 import GoBackButton from "../../components/go-back-button/button";
 
-const backgroundImage = require('../../../assets/background/maps.png');
+const backgroundImage = require('../../../assets/img/background/maps.png');
 
 function AdventuresScreen(props: any): React.JSX.Element {
     return (
