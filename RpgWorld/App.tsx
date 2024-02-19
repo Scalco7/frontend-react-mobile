@@ -4,7 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import HomeScreen from './src/home/screen/home';
 import HeroesScreen from './src/heroes/screen/heroes';
-import AdventuresScreen from './src/adventures/screen/adventures';
+import MapsScreen from './src/maps/screen/maps';
 
 const Stack = createNativeStackNavigator();
 
@@ -26,8 +26,8 @@ function App(): React.JSX.Element {
           component={HeroesScreen}
         />
         <Stack.Screen
-          name="Adventures"
-          component={AdventuresScreen}
+          name="Maps"
+          component={MapsScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

@@ -15,7 +15,7 @@ function HomeScreen(props: any): React.JSX.Element {
 
                 <TouchableOpacity
                     style={styles.button}
-                    onPress={() => props.navigation.push('Adventures')}
+                    onPress={() => props.navigation.push('Maps')}
                 >
                     <Text style={styles.text}>Aventuras</Text>
                 </TouchableOpacity>

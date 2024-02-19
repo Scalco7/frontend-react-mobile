@@ -3,7 +3,7 @@ import GoBackButton from "../../components/go-back-button/button";
 
 const backgroundImage = require('../../../assets/img/background/maps.png');
 
-function AdventuresScreen(props: any): React.JSX.Element {
+function MapsScreen(props: any): React.JSX.Element {
     return (
         <View style={styles.box}>
             <Image source={backgroundImage} style={styles.imageBackground}></Image>
@@ -35,4 +35,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default AdventuresScreen;
+export default MapsScreen;
