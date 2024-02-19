@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
     carousel: {
         alignItems: 'center',
         justifyContent: 'center',
-        paddingTop: 230
+        paddingTop: 200
     },
 
     imageBackground: {
