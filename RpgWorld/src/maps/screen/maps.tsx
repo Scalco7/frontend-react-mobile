@@ -98,9 +98,9 @@ function MapsScreen(props: any): React.JSX.Element {
                     sliderWidth={screenWidth}
                     itemWidth={230}
                     activeSlideAlignment="center"
-                    inactiveSlideShift={-screenHeight/5}
+                    inactiveSlideShift={-screenHeight/6.5}
                     loop={true}
-                    contentContainerCustomStyle={[styles.carousel, {paddingTop: screenHeight/4.5}]}
+                    contentContainerCustomStyle={[styles.carousel, {paddingTop: screenHeight/7}]}
                     slideStyle={styles.carouselSlide}
                 />
                 <DataComponent mapData={maps[currentIndex]}></DataComponent>

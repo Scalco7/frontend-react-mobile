@@ -138,7 +138,7 @@ function HeroesScreen(props: any): React.JSX.Element {
                     renderItem={CarouselItem}
                     sliderWidth={screenWidth}
                     itemWidth={ITEM_WIDTH - 50}
-                    inactiveSlideShift={-screenHeight/5}
+                    inactiveSlideShift={-screenHeight/4}
                     useScrollView={true}
                     loop={true}
                     contentContainerCustomStyle={[styles.carousel, {paddingTop: screenHeight/3.5}]}
