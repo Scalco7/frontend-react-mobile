@@ -1,31 +1,25 @@
 import React from 'react';
 import { View, StyleSheet, Image } from "react-native";
 
-export const ITEM_WIDTH = 280;
-
 const CarouselItemComponent = (props: any) => {
     const item = props.item;
     const index = props.index;
     const selected: boolean = item.selected;
+    const width = 300;
 
     return (
-        <View style={styles.container} key={index}>
+        <View style={{ width: width }} key={index}>
             <Image
                 source={selected ? item.defaultImg : item.blackImg}
-                style={styles.image}
+                style={[styles.image, { width: width, }]}
             />
         </View>
     );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        width: ITEM_WIDTH
-    },
-
     image: {
-        objectFit: 'contain',
-        width: ITEM_WIDTH,
+        objectFit: 'contain'
     }
 })
 

@@ -109,7 +109,7 @@ function HeroesScreen(props: any): React.JSX.Element {
 
     const updateSelected = (_currentIndex: number) => {
         let heroesList = heroes;
-        heroes.forEach((hero, index) => {
+        heroesList.forEach((hero, index) => {
             hero.selected = _currentIndex == index;
         });
 
@@ -127,6 +127,7 @@ function HeroesScreen(props: any): React.JSX.Element {
                     layout="default"
                     layoutCardOffset={heroes.length}
                     ref={(c) => {
+                        console.log('chamou la');
                         updateSelected(0);
                     }}
                     data={heroes}
