@@ -25,7 +25,8 @@ export interface IHero {
 const backgroundImage = require('../../../assets/img/background/heroes.png');
 
 function HeroesScreen(props: any): React.JSX.Element {
-    const SLIDER_WIDTH = useWindowDimensions().width;
+    const screenWidth = useWindowDimensions().width;
+    const screenHeight = useWindowDimensions().height;
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -135,12 +136,13 @@ function HeroesScreen(props: any): React.JSX.Element {
                         updateSelected(_index);
                     }}
                     renderItem={CarouselItem}
-                    sliderWidth={SLIDER_WIDTH}
+                    sliderWidth={screenWidth}
                     itemWidth={ITEM_WIDTH - 50}
-                    inactiveSlideShift={-200}
+                    inactiveSlideShift={-screenHeight/5}
                     useScrollView={true}
                     loop={true}
-                    contentContainerCustomStyle={styles.carousel}
+                    contentContainerCustomStyle={[styles.carousel, {paddingTop: screenHeight/3.5}]}
+                    slideStyle={styles.carouselSlide}
                 />
                 <DataComponent heroData={heroes[currentIndex]}></DataComponent>
             </View>
@@ -161,7 +163,11 @@ const styles = StyleSheet.create({
 
     carousel: {
         alignItems: 'center',
-        paddingTop: 230
+    },
+
+    carouselSlide: {
+        alignItems: 'center',
+        justifyContent: 'center'
     },
 
     imageBackground: {
