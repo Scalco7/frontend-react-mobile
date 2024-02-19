@@ -1,4 +1,5 @@
 import { StyleSheet, View, Text, Image } from "react-native";
+import LinearGradient from "react-native-linear-gradient";
 
 export interface IHeroData {
     color: string;
@@ -25,7 +26,10 @@ function DataComponent(props: any): React.JSX.Element {
     const heroData: IHeroData = props.heroData;
 
     return (
-        <View style={[styles.boxAll, { backgroundColor: heroData.color }]}>
+        <LinearGradient 
+        colors={[heroData.color+'00', heroData.color]}
+        locations={[0, 0.3]}
+        style={styles.boxAll}>
             <View>
                 <Text style={[styles.text, styles.nameText]}>{heroData.name}</Text>
                 <Text style={[styles.text, styles.titleText]}>{heroData.title}</Text>
@@ -64,7 +68,8 @@ function DataComponent(props: any): React.JSX.Element {
                     </View>
                 </View>
             </View>
-        </View>
+        </LinearGradient>
+
     );
 }
 
@@ -72,7 +77,8 @@ const styles = StyleSheet.create({
     boxAll: {
         width: '100%',
         paddingHorizontal: 15,
-        paddingVertical: 20
+        paddingTop: 30,
+        paddingBottom: 15
     },
 
     boxAllStatus: {

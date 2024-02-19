@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
         paddingVertical: 20,
         gap: 20,
         backgroundColor: '#d9d9d980',
-        height: 320
+        height: 305
     },
 
     boxTop: {
