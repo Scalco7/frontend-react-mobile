@@ -20,12 +20,18 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'flex-start',
+        backgroundColor: '#ffffff4d',
+        paddingVertical: 2,
+        paddingLeft: 10,
+        paddingRight: 20,
+        borderRadius: 20,
         gap: 5
     },
 
     image: {
-        width: 40,
-        height: 40
+        objectFit: 'contain',
+        width: 30,
+        height: 30
     },
 
     text: {
